@@ -49,3 +49,10 @@ This is what youll see after selecting a target.
 If you need flags that arent here, write them in "Custom Args" the same way youd write them in CLI.\
 Heres an example.
 ![CustomArgs](pics/customargs.png)
+
+## Note
+If your target doesnt have cgo support, attempting to compile with cgo enabled will just cause it to compile without cgo.
+
+If you want to use more -ldflags, make sure that "Strip Symbols" is disabled. Otherwise, your custom -ldflags will just get ignored as "Strip Symbols" (the latest flag) takes priority.
+
+This tool also reliably with older Go toolchains. Tested with Go 1.17.1 without any issues.
