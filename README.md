@@ -55,4 +55,4 @@ If your target doesnt have cgo support, attempting to compile with cgo enabled w
 
 If you want to use more -ldflags, make sure that "Strip Symbols" is disabled. Otherwise, your custom -ldflags will just get ignored as "Strip Symbols" (the latest flag) takes priority.
 
-This tool also reliably with older Go toolchains. Tested with Go 1.17.1 without any issues.
+This tool also works reliably with older Go toolchains. Tested with Go 1.17.1 without any issues.
