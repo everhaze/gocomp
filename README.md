@@ -13,6 +13,8 @@ go build .
 ## Usage
 There are 2 ways to use it.
 ### 1. CLI
+The CLI is for people who want something similar to "cargo build --release".\
+It strips all symbols and produces a production ready ELF.
 ```sh
 #      mode  cgo  name
 gocomp qs/cc 0/1 myapp
