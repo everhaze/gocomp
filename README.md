@@ -42,8 +42,8 @@ It fetches the available targets directly from your go toolchain so it can stay 
 This is what youll see after running gocomp.
 ![Targets](pics/targets.png)
 
-Here you can configure the flags for go build.\
-This is what youll see after selecting a target.
+This is what youll see after selecting a target.\
+Here you can configure the flags for go build.
 ![Options](pics/options.png)
 
 If you need flags that arent here, write them in "Custom Args" the same way youd write them in CLI.\
