@@ -7,7 +7,7 @@ wget https://github.com/everhaze/gocomp/archive/refs/heads/main.tar.gz
 tar -xzf gocomp-main
 cd gocomp-main
 go mod tidy
-go build -o gocomp
+go build .
 ```
 
 ## Usage
