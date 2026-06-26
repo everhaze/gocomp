@@ -171,6 +171,6 @@ func main() {
 	e := app.SetRoot(pages, true).EnableMouse(true).Run()
 	if e != nil {
 		app.Stop()
-		panic(e)
+		log.Fatal(e)
 	}
 }
