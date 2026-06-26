@@ -4,7 +4,7 @@ QoL tool for compiling Go code
 ## Compiling
 ```sh
 wget https://github.com/everhaze/gocomp/archive/refs/heads/main.tar.gz
-tar -xzf gocomp-main
+tar -xzf main.tar.gz
 cd gocomp-main
 go mod tidy
 go build .
@@ -37,12 +37,15 @@ gocomp qs 0 myapp
 # For the TUI, you just run gocomp without passing any args.
 gocomp
 ```
-The TUI makes cross compiling as easy as it gets.
-It fetches the available targets directly from your go toolchain so it can stay up to date with your toolchain.
+The TUI makes cross compiling as easy as it gets.\
+It fetches the available targets directly from your go toolchain so it can stay up to date with your toolchain.\
+This is what youll see after running gocomp.
 ![Targets](pics/targets.png)
 
-Here you can configure the flags for go build.
+Here you can configure the flags for go build.\
+This is what youll see after selecting a target.
 ![Options](pics/options.png)
 
-If you need flags that arent here, write them in "Custom Args" the same way youd write them in CLI.
+If you need flags that arent here, write them in "Custom Args" the same way youd write them in CLI.\
+Heres an example.
 ![CustomArgs](pics/customargs.png)
