@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -39,7 +38,8 @@ func main() {
 		c := exec.Command("go", "clean", "-cache")
 		err := c.Run()
 		if err != nil {
-			log.Fatal(err)
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
 		}
 		return
 	}
@@ -59,7 +59,8 @@ func main() {
 
 	l, err := List()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 
 	var tableData [][]string
@@ -151,8 +152,8 @@ func main() {
 			msg, err := Compile(s.goos, s.goarch, cgo, passargs)
 			if err != nil {
 				app.Stop()
-				fmt.Println(msg)
-				log.Fatal(err)
+				fmt.Fprintln(os.Stderr, err)
+				os.Exit(1)
 			}
 			app.Stop()
 			fmt.Println(msg)
@@ -171,6 +172,7 @@ func main() {
 	e := app.SetRoot(pages, true).EnableMouse(true).Run()
 	if e != nil {
 		app.Stop()
-		log.Fatal(e)
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 }
