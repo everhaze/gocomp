@@ -26,7 +26,8 @@ func Clibuild(name string, cgoenabled string) {
 	o, err := cmd.CombinedOutput()
 	if err != nil {
 		fmt.Println(string(o))
-		panic(err)
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
 	fmt.Println(string(o))
 }
