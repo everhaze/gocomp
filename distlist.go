@@ -20,7 +20,10 @@ func List() ([]DistList, error) {
 	}
 
 	var list []DistList
-	json.Unmarshal(o, &list)
+	err = json.Unmarshal(o, &list)
+	if err != nil {
+		return []DistList{}, err
+	}
 
 	return list, nil
 }
